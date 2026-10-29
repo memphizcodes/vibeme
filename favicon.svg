@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#F0E6D3"/>
+
+  <!-- Magnifying glass lens -->
+  <circle cx="27" cy="27" r="14" fill="#FAF6EE" stroke="#8B6240" stroke-width="3"/>
+
+  <!-- Globe inside lens -->
+  <!-- Globe outline -->
+  <circle cx="27" cy="27" r="10" fill="#C4E8F0" stroke="#8B6240" stroke-width="1.2"/>
+  <!-- Equator line -->
+  <line x1="17" y1="27" x2="37" y2="27" stroke="#8B6240" stroke-width="1" opacity="0.6"/>
+  <!-- Vertical meridian -->
+  <ellipse cx="27" cy="27" rx="5" ry="10" stroke="#8B6240" stroke-width="1" opacity="0.5" fill="none"/>
+  <!-- Top arc -->
+  <path d="M 20,21 Q 27,18 34,21" stroke="#8B6240" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Bottom arc -->
+  <path d="M 20,33 Q 27,36 34,33" stroke="#8B6240" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Small land mass hint -->
+  <ellipse cx="24" cy="25" rx="3" ry="2" fill="#8B6240" opacity="0.35" transform="rotate(-15 24 25)"/>
+  <ellipse cx="30" cy="29" rx="2.5" ry="1.5" fill="#8B6240" opacity="0.30" transform="rotate(10 30 29)"/>
+
+  <!-- Magnifying handle -->
+  <line x1="37" y1="37" x2="50" y2="50" stroke="#5C3D2E" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Small sparkles -->
+  <path d="M50,14 L51.2,17.2 L54.5,14 L51.2,10.8 Z" fill="#C4A882"/>
+  <path d="M56,10 L56.8,12.2 L59,10 L56.8,7.8 Z" fill="#C4A882" opacity="0.7"/>
+</svg>

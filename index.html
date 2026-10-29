@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>World's Prettiest Person</title>
+  <meta name="description" content="The World's Official Beauty Registry — Global Search System">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Botanical background decorations -->
+  <div class="bg-botanicals" aria-hidden="true">
+    <svg class="botanical top-left" viewBox="0 0 180 200" fill="none">
+      <path d="M20,180 C40,140 80,100 120,60" stroke="#C4A882" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M20,180 C50,155 70,130 85,95" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round" />
+      <path d="M85,95 C75,80 65,70 60,55" stroke="#C4A882" stroke-width="1" stroke-linecap="round" />
+      <path d="M85,95 C95,78 105,65 115,50" stroke="#C4A882" stroke-width="1" stroke-linecap="round" />
+      <ellipse cx="60" cy="52" rx="10" ry="16" transform="rotate(-30 60 52)" stroke="#C4A882" stroke-width="1"
+        fill="none" />
+      <ellipse cx="115" cy="47" rx="10" ry="16" transform="rotate(20 115 47)" stroke="#C4A882" stroke-width="1"
+        fill="none" />
+      <path d="M50,130 C40,118 30,115 25,105" stroke="#C4A882" stroke-width="1" stroke-linecap="round" />
+      <ellipse cx="23" cy="102" rx="8" ry="13" transform="rotate(-45 23 102)" stroke="#C4A882" stroke-width="1"
+        fill="none" />
+    </svg>
+    <svg class="botanical bottom-right" viewBox="0 0 180 200" fill="none">
+      <path d="M160,20 C140,60 100,100 60,140" stroke="#C4A882" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M160,20 C130,45 110,70 95,105" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round" />
+      <path d="M95,105 C105,120 115,130 120,145" stroke="#C4A882" stroke-width="1" stroke-linecap="round" />
+      <path d="M95,105 C85,122 75,135 65,150" stroke="#C4A882" stroke-width="1" stroke-linecap="round" />
+      <ellipse cx="120" cy="148" rx="10" ry="16" transform="rotate(30 120 148)" stroke="#C4A882" stroke-width="1"
+        fill="none" />
+      <ellipse cx="63" cy="153" rx="10" ry="16" transform="rotate(-20 63 153)" stroke="#C4A882" stroke-width="1"
+        fill="none" />
+    </svg>
+    <svg class="heart-deco heart-1" viewBox="0 0 50 45" fill="none">
+      <path
+        d="M25,38 C25,38 5,25 5,13 C5,7 10,3 15,3 C19,3 23,5 25,9 C27,5 31,3 35,3 C40,3 45,7 45,13 C45,25 25,38 25,38 Z"
+        stroke="#C4A882" stroke-width="1.2" fill="none" />
+    </svg>
+    <svg class="heart-deco heart-2" viewBox="0 0 50 45" fill="none">
+      <path
+        d="M25,38 C25,38 5,25 5,13 C5,7 10,3 15,3 C19,3 23,5 25,9 C27,5 31,3 35,3 C40,3 45,7 45,13 C45,25 25,38 25,38 Z"
+        stroke="#C4A882" stroke-width="1.2" fill="none" />
+    </svg>
+    <svg class="heart-deco heart-3" viewBox="0 0 50 45" fill="none">
+      <path
+        d="M25,38 C25,38 5,25 5,13 C5,7 10,3 15,3 C19,3 23,5 25,9 C27,5 31,3 35,3 C40,3 45,7 45,13 C45,25 25,38 25,38 Z"
+        stroke="#C4A882" stroke-width="1.2" fill="none" />
+    </svg>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ══════════════════════════════════
+       STATE 1: LANDING
+  ══════════════════════════════════ -->
+  <div id="state-1" class="state active">
+    <div class="card card-landing">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <p class="label-small">Est. Since the Beginning of Time</p>
+      <h1 class="title-main">World's Prettiest<br>Person</h1>
+      <p class="subtitle">Global Registry</p>
+      <div class="divider-floral">
+        <svg viewBox="0 0 200 20" fill="none">
+          <line x1="0" y1="10" x2="70" y2="10" stroke="#C4A882" stroke-width="0.8" />
+          <path d="M80,10 C83,6 87,6 90,10 C93,14 97,14 100,10 C103,6 107,6 110,10 C113,14 117,14 120,10"
+            stroke="#C4A882" stroke-width="1" fill="none" />
+          <line x1="130" y1="10" x2="200" y2="10" stroke="#C4A882" stroke-width="0.8" />
+        </svg>
+      </div>
+      <p class="body-text">Scanning a database of over 8 Billion individuals across every nation, continent, and
+        coordinate on this earth.</p>
+      <button id="btn-launch" class="btn-primary">
+        Begin Global Search
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+      </button>
+      <p class="fine-print">Searching across all 7 continents · 195 countries · 8B+ profiles</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 2: WORLD SCANNER
+  ══════════════════════════════════ -->
+  <div id="state-2" class="state">
+    <div class="card card-map">
+      <p class="label-small" style="margin-bottom:5px">Global Scan In Progress</p>
+      <h2 class="title-map" id="scan-headline">Searching the World...</h2>
+
+      <div class="scanner-viewport">
+        <!-- Background Grid Lines -->
+        <div class="map-grid-overlay"></div>
+
+        <!-- World Map Image Container -->
+        <div class="map-image-wrapper" id="map-wrapper">
+          <img src="world_map.png" alt="World Map" class="world-map-img" id="world-map-img">
+
+          <!-- Dynamic Rubber Stamps for Continents -->
+          <div class="stamp-continent stamp-na" id="stamp-na">✕ NOT FOUND</div>
+          <div class="stamp-continent stamp-sa" id="stamp-sa">✕ NOT FOUND</div>
+          <div class="stamp-continent stamp-eu" id="stamp-eu">✕ NOT FOUND</div>
+          <div class="stamp-continent stamp-af" id="stamp-af">✕ NOT FOUND</div>
+          <div class="stamp-continent stamp-au" id="stamp-au">✕ NOT FOUND</div>
+          <div class="stamp-continent stamp-india" id="stamp-india">✓ MATCH FOUND</div>
+        </div>
+
+        <!-- Radar Beam Sweeper -->
+        <div class="radar-beam-overlay"></div>
+
+        <!-- Targeting Crosshairs Reticle -->
+        <div class="hud-reticle" id="hud-reticle">
+          <div class="reticle-circle"></div>
+          <div class="reticle-line-h"></div>
+          <div class="reticle-line-v"></div>
+        </div>
+
+        <!-- Status badge -->
+        <div id="scan-indicator" class="scan-indicator">
+          <div class="scan-pulse"></div>
+          <span id="scan-text">Initialising scan...</span>
+        </div>
+      </div>
+
+      <!-- Real-time Terminal Log (Lato serif/sans aesthetic) -->
+      <div class="log-terminal">
+        <div id="log-content"></div>
+        <span class="cursor">_</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 3: ZOOM / DRILL DOWN
+  ══════════════════════════════════ -->
+  <div id="state-3" class="state">
+    <div class="card card-zoom">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <p class="label-small found-label">Match Detected</p>
+      <h2 class="title-main" style="font-size: clamp(1.6rem,5vw,2.2rem)">Zooming In...</h2>
+      <div class="location-trail">
+        <div class="trail-item" id="trail-asia"><span class="trail-icon">🌏</span><span
+            class="trail-name">Asia</span><span class="trail-arrow">→</span></div>
+        <div class="trail-item" id="trail-india"><span class="trail-icon">🇮🇳</span><span
+            class="trail-name">India</span><span class="trail-arrow">→</span></div>
+        <div class="trail-item" id="trail-karnataka"><span class="trail-icon">📍</span><span
+            class="trail-name">Karnataka</span><span class="trail-arrow">→</span></div>
+        <div class="trail-item" id="trail-bangalore"><span class="trail-icon">✦</span><span
+            class="trail-name">Bangalore</span></div>
+      </div>
+      <div class="coordinates-box">
+        <div class="coord-row"><span class="coord-label">LAT</span><span class="coord-value" id="coord-lat">—</span>
+        </div>
+        <div class="coord-divider"></div>
+        <div class="coord-row"><span class="coord-label">LON</span><span class="coord-value" id="coord-lon">—</span>
+        </div>
+      </div>
+      <p class="zoom-status-text" id="zoom-status">Locking onto coordinates...</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 4: HER REVEAL
+  ══════════════════════════════════ -->
+  <div id="state-4" class="state">
+    <div class="card card-reveal">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <p class="label-small found-label">Search Complete</p>
+      <div class="registry-frame">
+        <div class="frame-header">
+          <span class="frame-header-text">WORLD BEAUTY REGISTRY — ENTRY #WP-74291-KA</span>
+        </div>
+
+        <div class="photo-container">
+          <div class="photo-inner">
+            <div class="photo-placeholder" id="photo-placeholder">
+              <svg viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="28" r="16" stroke="#C4A882" stroke-width="1.5" />
+                <path d="M15,72 C15,54 65,54 65,72" stroke="#C4A882" stroke-width="1.5" fill="none"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <img id="her-photo" src="her.jpg" alt="The World's Prettiest Person"
+              onerror="document.getElementById('photo-placeholder').style.display='flex';this.style.display='none';">
+          </div>
+          <svg class="photo-corners" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none">
+            <path d="M5,20 L5,5 L20,5" stroke="#C4A882" stroke-width="1.5" />
+            <path d="M80,5 L95,5 L95,20" stroke="#C4A882" stroke-width="1.5" />
+            <path d="M5,80 L5,95 L20,95" stroke="#C4A882" stroke-width="1.5" />
+            <path d="M80,95 L95,95 L95,80" stroke="#C4A882" stroke-width="1.5" />
+          </svg>
+        </div>
+
+        <div class="her-name-block">
+          <div class="her-name-label">Name</div>
+          <div class="her-name-value">Likhitha A Aralimara</div>
+        </div>
+
+        <div class="registry-stats">
+          <div class="stat-item">
+            <span class="stat-key">Location</span>
+            <span class="stat-val">Bangalore, Karnataka</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-key">Beauty Radiance</span>
+            <span class="stat-val highlight-val">OFF THE CHARTS</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-key">Cuteness Level</span>
+            <span class="stat-val highlight-val">SYSTEM OVERLOAD</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-key">Sexy Factor</span>
+            <span class="stat-val highlight-val">INFINITE ∞</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-key">Conclusion</span>
+            <span class="stat-val highlight-val">World's Prettiest ♥</span>
+          </div>
+        </div>
+
+        <div class="stamp-row">
+          <div class="stamp" id="registry-stamp">
+            <div class="stamp-inner">
+              <span class="stamp-text">VERIFIED</span>
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="27" stroke="#C4A882" stroke-width="1.5" stroke-dasharray="3,2" />
+                <path d="M18,30 L26,38 L42,22" stroke="#C4A882" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-match-section">
+          <div class="rel-status-row">
+            <span class="rel-status-key">Relationship Status</span>
+            <span class="rel-status-val">Single</span>
+          </div>
+          <button id="btn-find-match" class="btn-find-match">
+            ♥ &nbsp;Find an Ideal Match
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 5: PARTNER REQUIREMENTS SURVEY
+  ══════════════════════════════════ -->
+  <div id="state-5" class="state">
+    <div class="card card-survey">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <p class="label-small">Partner Criteria</p>
+      <h2 class="title-survey">What do you want<br>in your partner?</h2>
+      <p class="survey-sub">Click to select requirements:</p>
+
+      <div class="survey-list" id="survey-list">
+        <!-- Injected via JavaScript: ? -> ✓ -> ✗ -> ? -->
+      </div>
+
+      <button id="btn-survey-submit" class="btn-primary" style="margin-top:20px">
+        Find My Match
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 6: ERROR 404 SCREEN
+  ══════════════════════════════════ -->
+  <div id="state-6" class="state">
+    <div class="card card-error">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <div class="error-icon-wrap">⚠️</div>
+      <p class="label-small error-label">System Report</p>
+      <h2 class="title-error">Error 404:<br>No Match Found</h2>
+      <div class="error-divider">
+        <svg viewBox="0 0 200 20" fill="none">
+          <line x1="0" y1="10" x2="70" y2="10" stroke="#C4A882" stroke-width="0.8" />
+          <path d="M80,10 C83,6 87,6 90,10 C93,14 97,14 100,10 C103,6 107,6 110,10 C113,14 117,14 120,10"
+            stroke="#C4A882" stroke-width="1" fill="none" />
+          <line x1="130" y1="10" x2="200" y2="10" stroke="#C4A882" stroke-width="0.8" />
+        </svg>
+      </div>
+      <p class="error-question">Do you want to find the most compatible match with a few changes?</p>
+      <div class="error-buttons">
+        <button id="btn-error-yes" class="btn-primary">Yes, find match</button>
+        <div class="error-no-wrap" id="error-no-wrap">
+          <button id="btn-error-no" class="btn-error-no">No</button>
+        </div>
+      </div>
+      <p class="error-no-msg" id="error-no-msg"></p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 7: GUESS WHO — BOARD GAME
+  ══════════════════════════════════ -->
+  <div id="state-7" class="state">
+    <div class="card card-guess-who">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <p class="label-small">Elimination Protocol</p>
+      <h2 class="title-guess">♟ Guess Who?</h2>
+      <!-- Live Counter HUD: From 8,000,000 down to 1 -->
+      <div class="guess-hud-stats">
+        <span class="hud-stat-label">CANDIDATES REMAINING</span>
+        <span class="hud-stat-counter" id="guess-counter-num">8,000,000</span>
+      </div>
+
+      <div class="guess-criteria-box">
+        <p class="guess-criteria" id="guess-criteria">Scanning 8,000,000 Bangalore candidates...</p>
+      </div>
+
+      <div class="guess-board" id="guess-board">
+        <!-- 12 Cards injected by JS -->
+      </div>
+
+      <!-- Continuous Rapid Profile Scroller Filmstrip -->
+      <div class="profile-scroll-strip">
+        <div class="profile-scroll-badge">REJECTING:</div>
+        <div class="profile-scroll-track" id="profile-scroll-track">
+          <!-- Populated by JS with two identical groups for seamless infinite scrolling -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 8: MATCH SCAN TERMINAL
+  ══════════════════════════════════ -->
+  <div id="state-8" class="state">
+    <div class="card card-match-scan">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <p class="label-small">Compatibility Engine</p>
+      <h2 class="title-map" id="match-headline">Verifying Profile...</h2>
+      <div class="log-terminal match-terminal">
+        <div id="match-log-content"></div>
+        <span class="cursor">_</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 9: HIS REVEAL + PROPOSAL
+  ══════════════════════════════════ -->
+  <div id="state-9" class="state">
+    <div class="card card-reveal">
+
+      <!-- System Notification Banner Pop-up -->
+      <div class="system-alert-banner" id="system-alert-banner">
+        <div class="alert-banner-header">
+          <span class="alert-icon">⚠️</span>
+          <span class="alert-tag">SYSTEM NOTIFICATION</span>
+        </div>
+        <p class="alert-banner-text">Don't think you will find someone better. Take what you have.</p>
+      </div>
+
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <p class="label-small found-label">Profile Identified</p>
+      <div class="registry-frame">
+        <div class="frame-header">
+          <span class="frame-header-text">COMPATIBILITY MATCH — PROFILE #MK-1758-KA</span>
+        </div>
+
+        <div class="photo-container">
+          <div class="photo-inner">
+            <div class="photo-placeholder" id="his-placeholder">
+              <svg viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="28" r="16" stroke="#C4A882" stroke-width="1.5" />
+                <path d="M15,72 C15,54 65,54 65,72" stroke="#C4A882" stroke-width="1.5" fill="none"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <img id="his-photo" src="him.jpg" alt="Her Ideal Match"
+              onerror="document.getElementById('his-placeholder').style.display='flex';this.style.display='none';">
+          </div>
+          <svg class="photo-corners" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none">
+            <path d="M5,20 L5,5 L20,5" stroke="#C4A882" stroke-width="1.5" />
+            <path d="M80,5 L95,5 L95,20" stroke="#C4A882" stroke-width="1.5" />
+            <path d="M5,80 L5,95 L20,95" stroke="#C4A882" stroke-width="1.5" />
+            <path d="M80,95 L95,95 L95,80" stroke="#C4A882" stroke-width="1.5" />
+          </svg>
+        </div>
+
+        <div class="his-name-block">
+          <div class="his-name-label">Name</div>
+          <div class="his-name-value">Manas Kumar G A</div>
+        </div>
+
+        <div class="compat-big-box">
+          <div class="compat-big-label">Compatibility Score</div>
+          <div class="compat-big-value">100%</div>
+          <div class="compat-big-sub">✦ &nbsp;Perfect Match &nbsp;✦</div>
+        </div>
+
+        <div class="proposal-section" id="proposal-section" style="opacity:0; transition: opacity 0.8s ease;">
+          <div class="ornament-line" style="margin: 14px 0 10px;"><span></span><span
+              class="ornament-diamond">◆</span><span></span></div>
+          <p class="proposal-question">Would you like to be his girlfriend?</p>
+          <div class="proposal-buttons" id="proposal-buttons">
+            <button id="btn-yes" class="btn-yes">Yes ♥</button>
+            <button id="btn-no" class="btn-no">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATE 10: CELEBRATION WITH PHOTO BACKDROP
+  ══════════════════════════════════ -->
+  <div id="state-10" class="state">
+    <div class="card card-celebration">
+      <div class="ornament-line"><span></span><span class="ornament-diamond">◆</span><span></span></div>
+      <div class="celebration-badge">
+        <svg viewBox="0 0 80 80" fill="none">
+          <circle cx="40" cy="40" r="35" stroke="#C4A882" stroke-width="1" stroke-dasharray="3,2" />
+          <path
+            d="M40,58 C40,58 18,44 18,28 C18,19 25,13 32,13 C36,13 39.5,15 40,16 C40.5,15 44,13 48,13 C55,13 62,19 62,28 C62,44 40,58 40,58 Z"
+            fill="none" stroke="#C4A882" stroke-width="1.5" />
+        </svg>
+      </div>
+      <h2 class="celebration-title">She Said Yes! ♥</h2>
+      <p class="celebration-sub">Registry status officially updated.</p>
+
+      <!-- Love Letter Hero Card with couple photo as background -->
+      <div class="love-letter-hero">
+        <div class="love-letter-photo-bg" style="background-image: url('us.jpg');"></div>
+        <div class="love-letter-backdrop">
+          <div class="letter-heading">A Note From the Database</div>
+          <p class="letter-body">
+            Across 8 billion people, 7 continents, and every corner of this world, the search ended with you. You are, without question, the world's prettiest person. <span style="color: var(--rose);">❤️</span><br><br>
+            I want to be the person you think of when you're sad, happy, or feeling anything in between, and the person who you always know has your back.<br><br>
+            It would be a privilege to have that honor, and an absolute joy to worship you as my queen.<br>
+            <span class="letter-joke">(Swalpa jokes ♥ but mostly true.)</span>
+          </p>
+          <div class="letter-sign">World's Luckiest Man</div>
+        </div>
+      </div>
+
+      <div class="celebration-footer-tag">
+        <span>To Growing Together 🥂</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
